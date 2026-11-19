@@ -1,0 +1,71 @@
+{
+  "owner": "koritadenada",
+  "collections": [
+    {
+      "repo": "genie-deep-dive",
+      "title": "Genie Flavours",
+      "summary": "Genie Code, Genie Agents and Genie One: one governed foundation, three experiences.",
+      "tags": ["Genie"],
+      "pages": [
+        {"path": "", "title": "Genie Flavours", "desc": "Landing page: pick a Genie experience to open it.", "kind": "Landing"},
+        {"path": "cicd-pipeline.html", "title": "Genie Agents CI/CD", "desc": "Dev, staging and prod with a benchmark gate, step by step.", "kind": "Animated"}
+      ]
+    },
+    {
+      "repo": "genie-deployment-checklist",
+      "title": "Genie Agents deployment",
+      "summary": "From a validated Genie Agent to an enterprise rollout.",
+      "tags": ["Genie"],
+      "pages": [
+        {"path": "", "title": "Deployment checklist", "desc": "Interactive checklist with progress tracking.", "kind": "Checklist"},
+        {"path": "genie-deployment-guide.html", "title": "Enterprise deployment guide", "desc": "From proof of concept to hundreds or thousands of business users.", "kind": "Guide"}
+      ]
+    },
+    {
+      "repo": "data-platform-review",
+      "title": "Data platform review",
+      "summary": "Architecture and cost review: recommendations, dbt practices, Genie guide and session resources.",
+      "tags": ["Review", "Genie", "dbt"],
+      "pages": [
+        {"path": "", "title": "Data platform review", "desc": "Landing page for the review.", "kind": "Landing"},
+        {"path": "platform-review.html", "title": "Answers to the open questions", "desc": "SQL warehouses, serverless jobs, workspaces, semantic layer, ABAC, ML, observability.", "kind": "Guide"},
+        {"path": "warehouse-dbt.html", "title": "dbt practices", "desc": "Incremental strategies, cheap tests, adapter pinning, reference docs.", "kind": "Guide"},
+        {"path": "genie.html", "title": "Genie guide", "desc": "Genie flavours, the semantic layer behind Genie, best practices.", "kind": "Guide"},
+        {"path": "genie/", "title": "Genie for marketing self-service", "desc": "The Genie family as a click-through presentation.", "kind": "Animated"},
+        {"path": "resources.html", "title": "Session resources", "desc": "Monitoring dashboards, dbt cost, Genie MCP / API setup, warehouse settings.", "kind": "Guide"}
+      ]
+    },
+    {
+      "repo": "ai-agent-demo",
+      "title": "Port-call data for AI agents",
+      "summary": "Two sources in S3, one gold layer, Genie agents and an agents app on top.",
+      "tags": ["Architecture", "Genie", "Agents"],
+      "pages": [
+        {"path": "", "title": "Port-call data for AI agents", "desc": "Landing page.", "kind": "Landing"},
+        {"path": "architecture.html", "title": "Port-call AI agents architecture", "desc": "DMS and PDFs from S3 to gold, metric views, Genie agents, agents app.", "kind": "Animated"}
+      ]
+    },
+    {
+      "repo": "feature-store-credit-demo",
+      "title": "Feature Store demo",
+      "summary": "One loan application end to end: point-in-time training, online serving, monitoring.",
+      "tags": ["Architecture", "ML"],
+      "pages": [
+        {"path": "", "title": "Feature Store demo", "desc": "Landing page: Databricks-only and own-infrastructure variants.", "kind": "Landing"},
+        {"path": "architecture.html", "title": "Feature Store on Databricks", "desc": "Features ahead of time, lookup at application time, monitoring after the decision.", "kind": "Animated"},
+        {"path": "serving-own-infra.html", "title": "Serving from your own infrastructure", "desc": "Databricks builds, your AWS serves.", "kind": "Animated"}
+      ]
+    },
+    {
+      "repo": "azure-databricks-poc-architecture",
+      "title": "Azure Databricks PoC architecture",
+      "summary": "Networking, storage and the PoC pipelines.",
+      "tags": ["Architecture", "Azure"],
+      "pages": [
+        {"path": "", "title": "Azure Databricks PoC architecture", "desc": "Landing page.", "kind": "Landing"},
+        {"path": "network.html", "title": "Networking and storage", "desc": "Classic vs serverless compute, storage access, checklist.", "kind": "Animated"},
+        {"path": "pipelines.html", "title": "PoC pipelines", "desc": "Four workloads rebuilt on Azure Databricks.", "kind": "Animated"}
+      ]
+    }
+  ]
+}

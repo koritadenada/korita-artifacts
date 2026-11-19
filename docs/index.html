@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Denada Korita: published artifacts</title>
+<meta name="description" content="All published guides, architectures and presentations in one place.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect x='2' y='2' width='20' height='20' rx='5' fill='%23FF3621'/%3E%3Cpath d='M7 8h10M7 12h10M7 16h6' stroke='white' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{--navy:#0B2026;--ink:#1B3139;--ink2:#4A5F67;--muted:#6B7F86;--line:#DCE4E8;--bg:#F5F7F8;--card:#fff;--blue:#2272B4;--green:#00A972;--orange:#FFAB00;--lava:#FF3621}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:inherit;text-decoration:none}
+svg.ic{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+header{background:var(--navy);color:#fff;border-bottom:4px solid var(--lava)}
+header .wrap{padding-top:40px;padding-bottom:34px}
+.eyebrow{margin:0;text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--orange)}
+h1{margin:6px 0 8px;font-size:36px;line-height:1.15;letter-spacing:-.01em}
+.lede{margin:0 0 22px;color:#C9D6DB;font-size:17px;max-width:720px}
+.toc{display:flex;flex-wrap:wrap;gap:8px}
+.toc a{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;font-size:13px;font-weight:600;color:#E6EEF1}
+.toc a:hover{border-color:#fff;color:#fff}
+.toc b{background:rgba(255,255,255,.14);border-radius:999px;padding:0 7px;font-size:11px}
+.bar{position:sticky;top:0;z-index:5;background:rgba(245,247,248,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;gap:14px;align-items:center;padding-top:10px;padding-bottom:10px;flex-wrap:wrap}
+.search{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:6px 10px;color:var(--muted);flex:1;min-width:220px;max-width:380px}
+.search input{all:unset;flex:1;color:var(--ink);font-size:14px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:9px;overflow:hidden;background:#fff}
+.seg button{all:unset;cursor:pointer;padding:6px 12px;font-size:13px;font-weight:600;color:var(--ink2)}
+.seg button.on{background:var(--navy);color:#fff}
+.count{margin-left:auto;font-size:13px;color:var(--muted)}
+main{padding:10px 0 60px}
+.coll{padding-top:30px;scroll-margin-top:60px}
+.coll-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:14px;flex-wrap:wrap}
+.coll h2{margin:0;font-size:22px}
+.coll-head p{margin:2px 0 8px;color:var(--ink2)}
+.meta{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.tag{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue);background:#E8F1F9;border-radius:5px;padding:2px 7px}
+.date{font-size:12px;color:var(--muted);margin-left:4px}
+.links{display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;gap:7px;padding:8px 13px;border-radius:9px;font-size:13px;font-weight:600;background:var(--lava);color:#fff;border:1px solid var(--lava)}
+.btn:hover{background:#E62E1A}
+.btn.ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.card{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .15s,box-shadow .15s,border-color .15s}
+.card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(11,32,38,.10);border-color:#B8C7CD}
+.shot{aspect-ratio:16/10;background:#EEF2F4;border-bottom:1px solid var(--line);overflow:hidden}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;flex:1}
+.kind{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;width:max-content}
+.kind svg.ic{width:14px;height:14px}
+.k-landing{color:var(--ink2)} .k-animated{color:var(--lava)} .k-guide{color:var(--blue)} .k-checklist{color:var(--green)}
+.card h3{margin:2px 0 0;font-size:16px;line-height:1.3}
+.card p{margin:0;color:var(--ink2);font-size:13.5px;flex:1}
+.url{display:flex;align-items:center;gap:5px;margin-top:8px;font-size:12px;color:var(--muted);overflow:hidden;white-space:nowrap}
+.url svg.ic{width:13px;height:13px}
+.card:hover .url{color:var(--blue)}
+.hide{display:none!important}
+.empty{padding:60px 0;text-align:center;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:18px 0 30px;color:var(--muted);font-size:13px}
+@media (max-width:640px){h1{font-size:28px}.count{margin-left:0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <p class="eyebrow">Artifacts</p>
+    <h1>Published guides, architectures and presentations</h1>
+    <p class="lede">Everything published on GitHub Pages, grouped by site: 6 sites, 18 pages. Every card opens in a new tab.</p>
+    <nav class="toc"><a href="#genie-deep-dive">Genie Flavours<b>2</b></a><a href="#genie-deployment-checklist">Genie Agents deployment<b>2</b></a><a href="#data-platform-review">Data platform review<b>6</b></a><a href="#ai-agent-demo">Port-call data for AI agents<b>2</b></a><a href="#feature-store-credit-demo">Feature Store demo<b>3</b></a><a href="#azure-databricks-poc-architecture">Azure Databricks PoC architecture<b>3</b></a></nav>
+  </div>
+</header>
+<div class="bar">
+  <div class="wrap">
+    <label class="search"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search titles and descriptions" autocomplete="off"></label>
+    <div class="seg" id="tags"><button class="on" data-tag="">All</button><button data-tag="Agents">Agents</button><button data-tag="Architecture">Architecture</button><button data-tag="Azure">Azure</button><button data-tag="Genie">Genie</button><button data-tag="ML">ML</button><button data-tag="Review">Review</button><button data-tag="dbt">dbt</button></div>
+    <span class="count" id="count"></span>
+  </div>
+</div>
+<main class="wrap">
+  <section class="coll" id="genie-deep-dive" data-tags="Genie">
+    <div class="coll-head">
+      <div>
+        <h2>Genie Flavours</h2>
+        <p>Genie Code, Genie Agents and Genie One: one governed foundation, three experiences.</p>
+        <div class="meta"><span class="tag">Genie</span><span class="date">Updated 18 Nov 2026</span></div>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://koritadenada.github.io/genie-deep-dive/" target="_blank" rel="noopener">Open site<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn ghost" href="https://github.com/koritadenada/genie-deep-dive" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>Source</a>
+      </div>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://koritadenada.github.io/genie-deep-dive/" target="_blank" rel="noopener" data-hay="genie flavours genie flavours landing page: pick a genie experience to open it. landing genie">
+        <div class="shot"><img loading="lazy" src="thumbs/genie-deep-dive__index.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-landing"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Landing</span>
+          <h3>Genie Flavours</h3>
+          <p>Landing page: pick a Genie experience to open it.</p>
+          <span class="url">koritadenada.github.io/genie-deep-dive/<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/genie-deep-dive/cicd-pipeline.html" target="_blank" rel="noopener" data-hay="genie flavours genie agents ci/cd dev, staging and prod with a benchmark gate, step by step. animated genie">
+        <div class="shot"><img loading="lazy" src="thumbs/genie-deep-dive__cicd-pipeline.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-animated"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8.5 4.5 2.5-4.5 2.5z"/><path d="M8 21h8"/></svg>Animated</span>
+          <h3>Genie Agents CI/CD</h3>
+          <p>Dev, staging and prod with a benchmark gate, step by step.</p>
+          <span class="url">koritadenada.github.io/genie-deep-dive/cicd-pipeline.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="coll" id="genie-deployment-checklist" data-tags="Genie">
+    <div class="coll-head">
+      <div>
+        <h2>Genie Agents deployment</h2>
+        <p>From a validated Genie Agent to an enterprise rollout.</p>
+        <div class="meta"><span class="tag">Genie</span><span class="date">Updated 18 Nov 2026</span></div>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://koritadenada.github.io/genie-deployment-checklist/" target="_blank" rel="noopener">Open site<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn ghost" href="https://github.com/koritadenada/genie-deployment-checklist" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>Source</a>
+      </div>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://koritadenada.github.io/genie-deployment-checklist/" target="_blank" rel="noopener" data-hay="genie agents deployment deployment checklist interactive checklist with progress tracking. checklist genie">
+        <div class="shot"><img loading="lazy" src="thumbs/genie-deployment-checklist__index.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-checklist"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 7 2 2 4-4"/><path d="m4 16 2 2 4-4"/><path d="M13 7h7M13 16h7"/></svg>Checklist</span>
+          <h3>Deployment checklist</h3>
+          <p>Interactive checklist with progress tracking.</p>
+          <span class="url">koritadenada.github.io/genie-deployment-checklist/<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/genie-deployment-checklist/genie-deployment-guide.html" target="_blank" rel="noopener" data-hay="genie agents deployment enterprise deployment guide from proof of concept to hundreds or thousands of business users. guide genie">
+        <div class="shot"><img loading="lazy" src="thumbs/genie-deployment-checklist__genie-deployment-guide.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-guide"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M4 20.5A1.5 1.5 0 0 0 5.5 22H20"/><path d="M8 7h8M8 11h6"/></svg>Guide</span>
+          <h3>Enterprise deployment guide</h3>
+          <p>From proof of concept to hundreds or thousands of business users.</p>
+          <span class="url">koritadenada.github.io/genie-deployment-checklist/genie-deployment-guide.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="coll" id="data-platform-review" data-tags="Review Genie dbt">
+    <div class="coll-head">
+      <div>
+        <h2>Data platform review</h2>
+        <p>Architecture and cost review: recommendations, dbt practices, Genie guide and session resources.</p>
+        <div class="meta"><span class="tag">Review</span><span class="tag">Genie</span><span class="tag">dbt</span><span class="date">Updated 18 Nov 2026</span></div>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://koritadenada.github.io/data-platform-review/" target="_blank" rel="noopener">Open site<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn ghost" href="https://github.com/koritadenada/data-platform-review" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>Source</a>
+      </div>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://koritadenada.github.io/data-platform-review/" target="_blank" rel="noopener" data-hay="data platform review data platform review landing page for the review. landing review genie dbt">
+        <div class="shot"><img loading="lazy" src="thumbs/data-platform-review__index.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-landing"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Landing</span>
+          <h3>Data platform review</h3>
+          <p>Landing page for the review.</p>
+          <span class="url">koritadenada.github.io/data-platform-review/<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/data-platform-review/platform-review.html" target="_blank" rel="noopener" data-hay="data platform review answers to the open questions sql warehouses, serverless jobs, workspaces, semantic layer, abac, ml, observability. guide review genie dbt">
+        <div class="shot"><img loading="lazy" src="thumbs/data-platform-review__platform-review.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-guide"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M4 20.5A1.5 1.5 0 0 0 5.5 22H20"/><path d="M8 7h8M8 11h6"/></svg>Guide</span>
+          <h3>Answers to the open questions</h3>
+          <p>SQL warehouses, serverless jobs, workspaces, semantic layer, ABAC, ML, observability.</p>
+          <span class="url">koritadenada.github.io/data-platform-review/platform-review.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/data-platform-review/warehouse-dbt.html" target="_blank" rel="noopener" data-hay="data platform review dbt practices incremental strategies, cheap tests, adapter pinning, reference docs. guide review genie dbt">
+        <div class="shot"><img loading="lazy" src="thumbs/data-platform-review__warehouse-dbt.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-guide"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M4 20.5A1.5 1.5 0 0 0 5.5 22H20"/><path d="M8 7h8M8 11h6"/></svg>Guide</span>
+          <h3>dbt practices</h3>
+          <p>Incremental strategies, cheap tests, adapter pinning, reference docs.</p>
+          <span class="url">koritadenada.github.io/data-platform-review/warehouse-dbt.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/data-platform-review/genie.html" target="_blank" rel="noopener" data-hay="data platform review genie guide genie flavours, the semantic layer behind genie, best practices. guide review genie dbt">
+        <div class="shot"><img loading="lazy" src="thumbs/data-platform-review__genie.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-guide"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M4 20.5A1.5 1.5 0 0 0 5.5 22H20"/><path d="M8 7h8M8 11h6"/></svg>Guide</span>
+          <h3>Genie guide</h3>
+          <p>Genie flavours, the semantic layer behind Genie, best practices.</p>
+          <span class="url">koritadenada.github.io/data-platform-review/genie.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/data-platform-review/genie/" target="_blank" rel="noopener" data-hay="data platform review genie for marketing self-service the genie family as a click-through presentation. animated review genie dbt">
+        <div class="shot"><img loading="lazy" src="thumbs/data-platform-review__genie__index.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-animated"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8.5 4.5 2.5-4.5 2.5z"/><path d="M8 21h8"/></svg>Animated</span>
+          <h3>Genie for marketing self-service</h3>
+          <p>The Genie family as a click-through presentation.</p>
+          <span class="url">koritadenada.github.io/data-platform-review/genie/<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/data-platform-review/resources.html" target="_blank" rel="noopener" data-hay="data platform review session resources monitoring dashboards, dbt cost, genie mcp / api setup, warehouse settings. guide review genie dbt">
+        <div class="shot"><img loading="lazy" src="thumbs/data-platform-review__resources.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-guide"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v16H5.5A1.5 1.5 0 0 0 4 20.5z"/><path d="M4 20.5A1.5 1.5 0 0 0 5.5 22H20"/><path d="M8 7h8M8 11h6"/></svg>Guide</span>
+          <h3>Session resources</h3>
+          <p>Monitoring dashboards, dbt cost, Genie MCP / API setup, warehouse settings.</p>
+          <span class="url">koritadenada.github.io/data-platform-review/resources.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="coll" id="ai-agent-demo" data-tags="Architecture Genie Agents">
+    <div class="coll-head">
+      <div>
+        <h2>Port-call data for AI agents</h2>
+        <p>Two sources in S3, one gold layer, Genie agents and an agents app on top.</p>
+        <div class="meta"><span class="tag">Architecture</span><span class="tag">Genie</span><span class="tag">Agents</span><span class="date">Updated 03 Nov 2026</span></div>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://koritadenada.github.io/ai-agent-demo/" target="_blank" rel="noopener">Open site<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn ghost" href="https://github.com/koritadenada/ai-agent-demo" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>Source</a>
+      </div>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://koritadenada.github.io/ai-agent-demo/" target="_blank" rel="noopener" data-hay="port-call data for ai agents port-call data for ai agents landing page. landing architecture genie agents">
+        <div class="shot"><img loading="lazy" src="thumbs/ai-agent-demo__index.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-landing"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Landing</span>
+          <h3>Port-call data for AI agents</h3>
+          <p>Landing page.</p>
+          <span class="url">koritadenada.github.io/ai-agent-demo/<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/ai-agent-demo/architecture.html" target="_blank" rel="noopener" data-hay="port-call data for ai agents port-call ai agents architecture dms and pdfs from s3 to gold, metric views, genie agents, agents app. animated architecture genie agents">
+        <div class="shot"><img loading="lazy" src="thumbs/ai-agent-demo__architecture.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-animated"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8.5 4.5 2.5-4.5 2.5z"/><path d="M8 21h8"/></svg>Animated</span>
+          <h3>Port-call AI agents architecture</h3>
+          <p>DMS and PDFs from S3 to gold, metric views, Genie agents, agents app.</p>
+          <span class="url">koritadenada.github.io/ai-agent-demo/architecture.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="coll" id="feature-store-credit-demo" data-tags="Architecture ML">
+    <div class="coll-head">
+      <div>
+        <h2>Feature Store demo</h2>
+        <p>One loan application end to end: point-in-time training, online serving, monitoring.</p>
+        <div class="meta"><span class="tag">Architecture</span><span class="tag">ML</span><span class="date">Updated 22 Oct 2026</span></div>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://koritadenada.github.io/feature-store-credit-demo/" target="_blank" rel="noopener">Open site<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn ghost" href="https://github.com/koritadenada/feature-store-credit-demo" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>Source</a>
+      </div>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://koritadenada.github.io/feature-store-credit-demo/" target="_blank" rel="noopener" data-hay="feature store demo feature store demo landing page: databricks-only and own-infrastructure variants. landing architecture ml">
+        <div class="shot"><img loading="lazy" src="thumbs/feature-store-credit-demo__index.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-landing"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Landing</span>
+          <h3>Feature Store demo</h3>
+          <p>Landing page: Databricks-only and own-infrastructure variants.</p>
+          <span class="url">koritadenada.github.io/feature-store-credit-demo/<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/feature-store-credit-demo/architecture.html" target="_blank" rel="noopener" data-hay="feature store demo feature store on databricks features ahead of time, lookup at application time, monitoring after the decision. animated architecture ml">
+        <div class="shot"><img loading="lazy" src="thumbs/feature-store-credit-demo__architecture.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-animated"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8.5 4.5 2.5-4.5 2.5z"/><path d="M8 21h8"/></svg>Animated</span>
+          <h3>Feature Store on Databricks</h3>
+          <p>Features ahead of time, lookup at application time, monitoring after the decision.</p>
+          <span class="url">koritadenada.github.io/feature-store-credit-demo/architecture.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/feature-store-credit-demo/serving-own-infra.html" target="_blank" rel="noopener" data-hay="feature store demo serving from your own infrastructure databricks builds, your aws serves. animated architecture ml">
+        <div class="shot"><img loading="lazy" src="thumbs/feature-store-credit-demo__serving-own-infra.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-animated"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8.5 4.5 2.5-4.5 2.5z"/><path d="M8 21h8"/></svg>Animated</span>
+          <h3>Serving from your own infrastructure</h3>
+          <p>Databricks builds, your AWS serves.</p>
+          <span class="url">koritadenada.github.io/feature-store-credit-demo/serving-own-infra.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <section class="coll" id="azure-databricks-poc-architecture" data-tags="Architecture Azure">
+    <div class="coll-head">
+      <div>
+        <h2>Azure Databricks PoC architecture</h2>
+        <p>Networking, storage and the PoC pipelines.</p>
+        <div class="meta"><span class="tag">Architecture</span><span class="tag">Azure</span><span class="date">Updated 05 Nov 2026</span></div>
+      </div>
+      <div class="links">
+        <a class="btn" href="https://koritadenada.github.io/azure-databricks-poc-architecture/" target="_blank" rel="noopener">Open site<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></a>
+        <a class="btn ghost" href="https://github.com/koritadenada/azure-databricks-poc-architecture" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2.5m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg>Source</a>
+      </div>
+    </div>
+    <div class="grid">
+      <a class="card" href="https://koritadenada.github.io/azure-databricks-poc-architecture/" target="_blank" rel="noopener" data-hay="azure databricks poc architecture azure databricks poc architecture landing page. landing architecture azure">
+        <div class="shot"><img loading="lazy" src="thumbs/azure-databricks-poc-architecture__index.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-landing"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg>Landing</span>
+          <h3>Azure Databricks PoC architecture</h3>
+          <p>Landing page.</p>
+          <span class="url">koritadenada.github.io/azure-databricks-poc-architecture/<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/azure-databricks-poc-architecture/network.html" target="_blank" rel="noopener" data-hay="azure databricks poc architecture networking and storage classic vs serverless compute, storage access, checklist. animated architecture azure">
+        <div class="shot"><img loading="lazy" src="thumbs/azure-databricks-poc-architecture__network.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-animated"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8.5 4.5 2.5-4.5 2.5z"/><path d="M8 21h8"/></svg>Animated</span>
+          <h3>Networking and storage</h3>
+          <p>Classic vs serverless compute, storage access, checklist.</p>
+          <span class="url">koritadenada.github.io/azure-databricks-poc-architecture/network.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+      <a class="card" href="https://koritadenada.github.io/azure-databricks-poc-architecture/pipelines.html" target="_blank" rel="noopener" data-hay="azure databricks poc architecture poc pipelines four workloads rebuilt on azure databricks. animated architecture azure">
+        <div class="shot"><img loading="lazy" src="thumbs/azure-databricks-poc-architecture__pipelines.jpg" alt=""></div>
+        <div class="body">
+          <span class="kind k-animated"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="m10 8.5 4.5 2.5-4.5 2.5z"/><path d="M8 21h8"/></svg>Animated</span>
+          <h3>PoC pipelines</h3>
+          <p>Four workloads rebuilt on Azure Databricks.</p>
+          <span class="url">koritadenada.github.io/azure-databricks-poc-architecture/pipelines.html<svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/></svg></span>
+        </div>
+      </a>
+    </div>
+  </section>
+  <p class="empty hide" id="empty">No artifacts match.</p>
+</main>
+<footer><div class="wrap">Built from <a href="https://github.com/koritadenada/korita-artifacts">artifacts.json</a> with scripts/build.py.</div></footer>
+<script>
+const q=document.getElementById('q'),cnt=document.getElementById('count'),empty=document.getElementById('empty');
+let tag='';
+function apply(){
+  const s=q.value.trim().toLowerCase();let n=0;
+  document.querySelectorAll('.coll').forEach(c=>{
+    const tagOk=!tag||c.dataset.tags.split(' ').includes(tag);let k=0;
+    c.querySelectorAll('.card').forEach(a=>{const ok=tagOk&&(!s||a.dataset.hay.includes(s));a.classList.toggle('hide',!ok);if(ok)k++;});
+    c.classList.toggle('hide',!k);n+=k;
+  });
+  cnt.textContent=n+' of 18 pages';empty.classList.toggle('hide',n>0);
+}
+q.addEventListener('input',apply);
+document.getElementById('tags').addEventListener('click',ev=>{
+  const b=ev.target.closest('button');if(!b)return;
+  document.querySelectorAll('#tags button').forEach(x=>x.classList.toggle('on',x===b));
+  tag=b.dataset.tag;apply();
+});
+document.addEventListener('keydown',ev=>{if(ev.key==='/'&&document.activeElement!==q){ev.preventDefault();q.focus();}});
+apply();
+</script>
+</body>
+</html>
